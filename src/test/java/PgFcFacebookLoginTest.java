@@ -13,7 +13,7 @@ public class PgFcFacebookLoginTest {
 
     public void loginFacebook(String LOGIN, String PASSWORD) {
         FeedPage feedPage = Navigation.openMainPage().loginFacebook(LOGIN, PASSWORD);
-        Assert.assertTrue(feedPage.isUserIconDisplayed());
+        Assert.assertTrue(feedPage.isUserIconDisplayed(), "The icon of the user should be present");
     }
 
     @Test
