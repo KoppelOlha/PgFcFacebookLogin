@@ -4,17 +4,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FeedPage extends BrowserManager {
 
-    @FindBy(css = "[data-testid~=left_nav_section_Интересное]")
-    WebElement tableInteresting;
+    @FindBy(className = "imgWrap")
+    WebElement userIcon;
 
     public FeedPage feedPageInit() {
-        return PageFactory.initElements(BrowserManager.browser, FeedPage.class);
+        return PageFactory.initElements(BrowserManager.getBrowser(), FeedPage.class);
     }
 
-    public boolean isTableInterestingPresent() {
-        boolean isTableInterestingDisplayed = tableInteresting.isDisplayed();
-        return isTableInterestingDisplayed;
-
+    public boolean isUserIconDisplayed() {
+        return userIcon.isDisplayed();
     }
 
 }

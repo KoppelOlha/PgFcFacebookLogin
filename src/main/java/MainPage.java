@@ -4,9 +4,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends BrowserManager {
 
-    private static final String LOGIN = "";
-    private static final String PASSWORD = "";
-
     @FindBy(css = "[type~=email]")
     WebElement loginInput;
 
@@ -16,11 +13,10 @@ public class MainPage extends BrowserManager {
     @FindBy(xpath = ".//label[@id='loginbutton']")
     WebElement loginButtonClick;
 
-    public FeedPage loginFacebook() {
+    public FeedPage loginFacebook(String LOGIN, String PASSWORD) {
         loginInput.sendKeys(LOGIN);
         passwordInput.sendKeys(PASSWORD);
         loginButtonClick.click();
-        return PageFactory.initElements(BrowserManager.browser, FeedPage.class);
+        return PageFactory.initElements(BrowserManager.getBrowser(), FeedPage.class);
     }
-
 }

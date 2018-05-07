@@ -5,18 +5,21 @@ import java.util.concurrent.TimeUnit;
 
 public class BrowserManager {
 
+    private static ThreadLocal<WebDriver> browser = new ThreadLocal<>();
 
-    public static WebDriver browser;
+    public static WebDriver getBrowser() {
+        return browser.get();
+    }
 
-    public void openBrowser() {
+    public static void setBrowser() {
         System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
-        browser = new ChromeDriver();
-        browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        browser.set(new ChromeDriver());
+        getBrowser().manage().window().maximize();
+        getBrowser().manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
     public static void closeBrowser() {
-        browser.quit();
+        getBrowser().quit();
     }
 
 }
