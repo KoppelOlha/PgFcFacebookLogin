@@ -19,17 +19,17 @@ public class PgFcFacebookLoginTest {
     }
 
     @Test
-    public void login1Facebook() {
+    public void loginFacebook1() {
         loginFacebook("", "");
     }
 
     @Test
-    public void login2Facebook() {
+    public void loginFacebook2() {
         loginFacebook("", "");
     }
 
     @Test
-    public void login3Facebook() {
+    public void loginFacebook3() {
         loginFacebook("", "");
     }
 
