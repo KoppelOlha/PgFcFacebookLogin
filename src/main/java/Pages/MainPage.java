@@ -1,3 +1,7 @@
+package Pages;
+
+import Framework.BrowserManager;
+import Pages.FeedPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,9 +17,9 @@ public class MainPage extends BrowserManager {
     @FindBy(xpath = ".//label[@id='loginbutton']")
     WebElement loginButtonClick;
 
-    public FeedPage loginFacebook(String LOGIN, String PASSWORD) {
-        loginInput.sendKeys(LOGIN);
-        passwordInput.sendKeys(PASSWORD);
+    public FeedPage loginFacebook(String login, String password) {
+        loginInput.sendKeys(login);
+        passwordInput.sendKeys(password);
         loginButtonClick.click();
         return PageFactory.initElements(BrowserManager.getBrowser(), FeedPage.class);
     }
