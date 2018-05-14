@@ -1,6 +1,6 @@
-import Framework.BrowserManager;
-import Framework.Navigation;
-import Pages.FeedPage;
+import framework.BrowserManager;
+import framework.Navigation;
+import pages.FeedPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,10 +20,10 @@ public class PgFcFacebookLoginTest {
 
     @Test
     public void loginFacebook1() {
-        loginFacebook("", "");
+        loginFacebook("380956320587", "olga10071981");
     }
 
-    @Test
+   /* @Test
     public void loginFacebook2() {
         loginFacebook("", "");
     }
@@ -31,7 +31,7 @@ public class PgFcFacebookLoginTest {
     @Test
     public void loginFacebook3() {
         loginFacebook("", "");
-    }
+    }*/
 
     @AfterMethod
     public void closeBrowser() {

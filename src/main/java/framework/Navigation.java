@@ -1,7 +1,6 @@
-package Framework;
+package framework;
 
-import Framework.BrowserManager;
-import Pages.MainPage;
+import pages.MainPage;
 import org.openqa.selenium.support.PageFactory;
 
 public class Navigation {

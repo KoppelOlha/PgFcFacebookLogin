@@ -1,7 +1,6 @@
-package Pages;
+package pages;
 
-import Framework.BrowserManager;
-import Pages.FeedPage;
+import framework.BrowserManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
